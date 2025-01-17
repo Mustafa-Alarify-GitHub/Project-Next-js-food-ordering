@@ -1,5 +1,5 @@
 "use client";
-import { Routes } from "@/app/constants/enums";
+import { Routes } from "@/constants/enums";
 import MLink from "./MLink";
 
 
