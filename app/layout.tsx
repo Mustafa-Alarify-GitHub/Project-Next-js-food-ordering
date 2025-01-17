@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
-import { Roboto } from 'next/font/google';
-import Header from "@/Components/Layout/Header";
+import { Roboto } from "next/font/google";
+import Header from "@/Components/Layout/Header/Header";
+import ReduxProvider from "@/Components/Global/ReduxProvider";
 
 const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
   preload: true,
 });
-
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,11 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={roboto.className}
-      >
-        <Header/>
-        {children}
+      <body className={roboto.className}>
+        <ReduxProvider>
+          <Header />
+          {children}
+        </ReduxProvider>
       </body>
     </html>
   );
