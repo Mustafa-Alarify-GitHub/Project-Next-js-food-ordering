@@ -25,7 +25,7 @@ const Hero = () => {
               width={500}
               height={500}
               src="/assets/Images/pizza.png"
-              className="rounded"
+              className="rounded w-[500px]"
               alt="ss"
               loading="eager"
               priority
@@ -38,3 +38,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
